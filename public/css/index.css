@@ -1,0 +1,110 @@
+/* COLORES */
+/*
+    Barra de navegación/Pié de página: #8AC3B8
+
+*/
+
+/* GLOBAL */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #8AC3B8;
+}
+
+main {
+    width: 95%;
+    margin: auto;
+}
+
+header {
+    background-color: #8AC3B8;
+}
+
+/* IMÁGENES*/
+.logo-principal {
+    width: 100px;
+    height: 100px;
+}
+
+.imagen-carrusel {
+    width: 200px;
+    height: 200px;
+}
+
+/* CONTENEDORES */
+.titulo-principal {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #3D776C;
+}
+
+.barra-navegacion {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-principal {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+
+.nav-principal a {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+
+.nav-secundaria {
+    display: flex;
+    width: 20%;
+    /*justify-content: space-around;*/
+    justify-content: end;
+    text-transform: uppercase;
+    color: white;
+}
+
+.caja-contenedor {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+
+/* BOTONES */
+.boton-secundaria {
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton-secundaria:hover {
+    background-color: royalblue;
+}
+
+#registro {
+    margin-right: 10px;
+}
+
+.nav-principal p {
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+.nav-principal p:hover {
+    font-size: 40px;
+}
