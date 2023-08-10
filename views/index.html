@@ -15,7 +15,7 @@
     </div>
     <header>
       <nav class="barra-navegacion">
-        <div class="caja-contenedor">
+        <div class="logo-contenedor">
           <img src="/images/logo-sin-fondo.png" alt="" class="logo-principal"/>
         </div>
         <ul class="nav-principal">
@@ -30,20 +30,21 @@
       </nav>
     </header>
     <main>
-      <div>
-        <img src="/images/ejemplo1.jpg" alt="" class="imagen-carrusel"/>
+      <div class="contenedor-carrusel">
+        <img src="/images/ejemplo1.jpg" alt="producto" class="imagen-carrusel"/>
+        <img src="/images/ejemplo2.jpg" alt="producto" class="imagen-carrusel"/>
+        <img src="/images/ejemplo3.jpg" alt="producto" class="imagen-carrusel"/>
       </div>
       <section>
-        <article>
+        <article class="main-informacion">
+          <h2>¿Quienes somos?</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste
             doloremque, modi dolorum exercitationem harum est mollitia voluptatum
             laboriosam. Ducimus inventore dignissimos numquam tempora ut beatae
             sapiente tenetur dolorum corrupti quaerat!</p>
         </article>
-        <article>
-            <img src="/images/ejemplo1.jpg" alt="" class="imagen-carrusel"/>
-            <img src="/images/ejemplo1.jpg" alt="" class="imagen-carrusel"/>
-            <img src="/images/ejemplo1.jpg" alt="" class="imagen-carrusel"/>
+        <article class="main-imagenes">
+            <!--<img src="/images/logo-sin-fondo.png" alt=""/>-->
         </article>
       </section>
     </main>
@@ -59,9 +60,9 @@
         <div class="contenedor-footer">
             <h3>SAN RAFAEL</h3>
             <ul>
-                <p><a href="#">Dirección</a></p>
-                <p><a href="#">388888888</a></p>
-                <p><a href="#">Otra información</a></p>
+                <p><i class="fa-solid fa-location-dot"></i><a href="#">Calle 123 - Barrio</a></p>
+                <p><i class="fa-solid fa-phone"></i><a href="#">388888888</a></p>
+                <p><i class="fa-solid fa-envelope"></i><a href="#">ejemplo@gmail.com</a></p>
             </ul>
         </div>
         <div class="contenedor-footer">
@@ -69,9 +70,9 @@
         </div>
         <div class="contenedor-footer">
             <h3>SEGUINOS</h3>
-            <ul>
-                <button><i class="fa-brands fa-facebook"></i></button>
-                <button><i class="fa-brands fa-instagram"></i></button>
+            <ul class="contenedor-redes-sociales">
+                <button class="boton-footer"><i class="fa-brands fa-facebook"></i></button>
+                <button class="boton-footer" id="instagram"><i class="fa-brands fa-instagram"></i></button>
             </ul>                                 
         </div>
     </footer>
