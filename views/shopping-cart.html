@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--IMPORT DE ARCHIVO CSS-->
+    <link rel="stylesheet" href="/css/shopping-cart.css"/>
+    <!--IMPORT DE ICONOS (FONT AWESOME)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Mi carrito de compras</title>
+</head>
+<body>
+    <header>
+        <nav class="barra-navegacion">
+          <div class="logo-contenedor">
+            <img src="/images/logo-sin-fondo.png" alt="" class="logo-principal"/>
+          </div>
+          <ul class="nav-principal">
+            <p><i class="fa-solid fa-house"></i><a href="">Inicio</a></p>
+            <p><i class="fa-solid fa-shop"></i><a href="">Productos</a></p>
+            <p><i class="fa-solid fa-phone"></i><a href="">Contáctanos</a></p>
+          </ul>
+          <ul class="nav-secundaria">
+            <button class="boton-secundaria" id="registro"><i class="fa-solid fa-right-to-bracket"></i></button>
+            <button class="boton-secundaria"><i class="fa-solid fa-cart-shopping"></i></button>
+          </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="tabla-principal">
+            <h1>Mi carrito</h1>
+            <table>
+                <tr>
+                    <th class="tabla-item-titulo">ITEM</th>
+                    <th class="tabla-detalle-titulo">DETALLES</th>
+                    <th class="tabla-precio-titulo">PRECIO</th>
+                </tr>
+                <tr>
+                    <td>Producto 1</td>
+                    <td>Detalles 1</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Producto 2</td>
+                    <td>Detalles 2</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Producto 3</td>
+                    <td>Detalles 3</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Producto 4</td>
+                    <td>Detalles 4</td>
+                    <td>$100</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tabla-resumen">
+            <table>
+                <tr>
+                    <th>RESUMEN DE PEDIDO</th>
+                </tr>
+                <tr>
+                    <td>Subtotal de ítems</td>
+                    <td><p>$0</p></td>
+                </tr>
+                <tr>
+                    <td>Envío</td>
+                    <td><p>$0</p></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td><p>$0</p></td>
+                </tr>
+            </table>
+            <button class="boton-comprar">CONTINUAR CON LA COMPRA</button>
+        </div>
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <h3>NAVEGACIÓN</h3>
+            <ul>
+                <p><a href="#">Inicio</a></p>
+                <p><a href="#">Productos</a></p>
+                <p><a href="#">Contáctanos</a></p>
+            </ul>
+        </div>
+        <div class="contenedor-footer">
+            <h3>SAN RAFAEL</h3>
+            <ul>
+                <p><i class="fa-solid fa-location-dot"></i><a href="#">Calle 123 - Barrio</a></p>
+                <p><i class="fa-solid fa-phone"></i><a href="#">388888888</a></p>
+                <p><i class="fa-solid fa-envelope"></i><a href="#">ejemplo@gmail.com</a></p>
+            </ul>
+        </div>
+        <div class="contenedor-footer">
+            <h3>ÁREA DE FORMAS DE PAGO</h3>
+        </div>
+        <div class="contenedor-footer">
+            <h3>SEGUINOS</h3>
+            <ul class="contenedor-redes-sociales">
+                <button class="boton-footer"><i class="fa-brands fa-facebook"></i></button>
+                <button class="boton-footer" id="instagram"><i class="fa-brands fa-instagram"></i></button>
+            </ul>                                 
+        </div>
+    </footer>
+</body>
+</html>
