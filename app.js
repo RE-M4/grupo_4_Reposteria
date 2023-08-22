@@ -1,23 +1,25 @@
+/** IMPORTS */
 const express = require('express')
-const app = express();
 const path = require('path')
 
-const publicPath = path.resolve(__dirname,"./public")
+/** IMPORTS DE ROUTERS */
+const indexRouter = require('./routes/index');
+const userRouter = require('./routes/user');
+const productsRouter = require('./routes/products');
 
+/** CONFIG */
+const app = express();
+const publicPath = path.resolve(__dirname,"./public")
 app.use(express.static(publicPath))
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs'); 
+
+/** ROUTERS */
+app.use(indexRouter);
+app.use(userRouter);
+app.use('/products',productsRouter);
+
 app.listen(3000, () => {
-    console.log("Server is running");
-})
-
-app.get('/', function(req,res){
-    res.sendFile(path.resolve(__dirname,'./views/index.html'))
-})
-
-app.get('/registro', function(req,res){
-    res.sendFile(path.resolve(__dirname,'./views/register.html'))
-})
-
-app.get('/carrito', function(req,res){
-    res.sendFile(path.resolve(__dirname,'./views/shopping-cart.html'))
+    console.log("Server Running");
 })
