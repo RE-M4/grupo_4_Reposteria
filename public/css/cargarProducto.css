@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9eac3;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  form {
+    width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  textarea,
+  input[type="file"],
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #c7f6d4;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #c7f6d4;
+  }
+  
+form.larger-form {
+    width: 800px; 
+  }
+  
+  label {
+    font-size: 25px; 
+  }
+  
+  input[type="text"],
+  textarea,
+  input[type="file"],
+  input[type="number"] {
+    font-size: 25px; 
+    padding: 2px; 
+    margin-bottom: 50px;
+  }
+  
+  button {
+    font-size: 25px; 
+    padding: 18px; 
+  }
+
+  .button-containter{
+
+    margin-top: 15px;
+
+  }
+  
+
+.color-checkboxes {
+    margin-top: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .color-checkboxes label {
+   
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 40px; 
+  }
+  
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 25px;
+    height: 50px;
+  }
+  
+ 
+  
