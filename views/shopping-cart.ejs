@@ -10,22 +10,7 @@
     <title>Mi carrito de compras</title>
 </head>
 <body>
-    <header>
-        <nav class="barra-navegacion">
-          <div class="logo-contenedor">
-            <img src="/images/logo-sin-fondo.png" alt="" class="logo-principal"/>
-          </div>
-          <ul class="nav-principal">
-            <p><i class="fa-solid fa-house"></i><a href="">Inicio</a></p>
-            <p><i class="fa-solid fa-shop"></i><a href="">Productos</a></p>
-            <p><i class="fa-solid fa-phone"></i><a href="">Contáctanos</a></p>
-          </ul>
-          <ul class="nav-secundaria">
-            <button class="boton-secundaria" id="registro"><i class="fa-solid fa-right-to-bracket"></i></button>
-            <button class="boton-secundaria"><i class="fa-solid fa-cart-shopping"></i></button>
-          </ul>
-        </nav>
-    </header>
+    <%- include('./partials/header') %>
     <main>
         <div class="tabla-principal">
             <h1>Mi carrito</h1>
@@ -78,33 +63,6 @@
             <button class="boton-comprar">CONTINUAR CON LA COMPRA</button>
         </div>
     </main>
-    <footer>
-        <div class="contenedor-footer">
-            <h3>NAVEGACIÓN</h3>
-            <ul>
-                <p><a href="#">Inicio</a></p>
-                <p><a href="#">Productos</a></p>
-                <p><a href="#">Contáctanos</a></p>
-            </ul>
-        </div>
-        <div class="contenedor-footer">
-            <h3>SAN RAFAEL</h3>
-            <ul>
-                <p><i class="fa-solid fa-location-dot"></i><a href="#">Calle 123 - Barrio</a></p>
-                <p><i class="fa-solid fa-phone"></i><a href="#">388888888</a></p>
-                <p><i class="fa-solid fa-envelope"></i><a href="#">ejemplo@gmail.com</a></p>
-            </ul>
-        </div>
-        <div class="contenedor-footer">
-            <h3>ÁREA DE FORMAS DE PAGO</h3>
-        </div>
-        <div class="contenedor-footer">
-            <h3>SEGUINOS</h3>
-            <ul class="contenedor-redes-sociales">
-                <button class="boton-footer"><i class="fa-brands fa-facebook"></i></button>
-                <button class="boton-footer" id="instagram"><i class="fa-brands fa-instagram"></i></button>
-            </ul>                                 
-        </div>
-    </footer>
+    <%- include('./partials/footer') %>
 </body>
 </html>

@@ -1,34 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!--IMPORT DE ARCHIVO CSS-->
-    <link rel="stylesheet" href="/css/index.css"/>
-    <!--IMPORT DE ICONOS (FONT AWESOME)-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>Inicio</title>
-  </head>
+  <%- include('./partials/head') %>
   <body>
     <div class="titulo-principal">
       <h1>SAN RAFAEL</h1>
     </div>
-    <header>
-      <nav class="barra-navegacion">
-        <div class="logo-contenedor">
-          <img src="/images/logo-sin-fondo.png" alt="" class="logo-principal"/>
-        </div>
-        <ul class="nav-principal">
-          <p><i class="fa-solid fa-house"></i><a href="">Inicio</a></p>
-          <p><i class="fa-solid fa-shop"></i><a href="">Productos</a></p>
-          <p><i class="fa-solid fa-phone"></i><a href="">Contáctanos</a></p>
-        </ul>
-        <ul class="nav-secundaria">
-          <button class="boton-secundaria" id="registro"><i class="fa-solid fa-right-to-bracket"></i></button>
-          <button class="boton-secundaria"><i class="fa-solid fa-cart-shopping"></i></button>
-        </ul>
-      </nav>
-    </header>
+    <link rel="stylesheet" href="/css/index.css"/>
+    <%- include('./partials/header') %>
     <main>
       <div class="contenedor-carrusel">
         <img src="/images/ejemplo1.jpg" alt="producto" class="imagen-carrusel"/>
@@ -48,33 +26,6 @@
         </article>
       </section>
     </main>
-    <footer>
-        <div class="contenedor-footer">
-            <h3>NAVEGACIÓN</h3>
-            <ul>
-                <p><a href="#">Inicio</a></p>
-                <p><a href="#">Productos</a></p>
-                <p><a href="#">Contáctanos</a></p>
-            </ul>
-        </div>
-        <div class="contenedor-footer">
-            <h3>SAN RAFAEL</h3>
-            <ul>
-                <p><i class="fa-solid fa-location-dot"></i><a href="#">Calle 123 - Barrio</a></p>
-                <p><i class="fa-solid fa-phone"></i><a href="#">388888888</a></p>
-                <p><i class="fa-solid fa-envelope"></i><a href="#">ejemplo@gmail.com</a></p>
-            </ul>
-        </div>
-        <div class="contenedor-footer">
-            <h3>ÁREA DE FORMAS DE PAGO</h3>
-        </div>
-        <div class="contenedor-footer">
-            <h3>SEGUINOS</h3>
-            <ul class="contenedor-redes-sociales">
-                <button class="boton-footer"><i class="fa-brands fa-facebook"></i></button>
-                <button class="boton-footer" id="instagram"><i class="fa-brands fa-instagram"></i></button>
-            </ul>                                 
-        </div>
-    </footer>
+    <%- include('./partials/footer') %>
   </body>
 </html>
