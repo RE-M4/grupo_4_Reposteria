@@ -16,7 +16,7 @@
 - Gabriel Céspedes, 17 años, San Salvador de Jujuy, Estudiante.
 - Jorge Alejandro Ramos, 20 años, Palpalá, Estudiante.
 - Rafael Cussi, 16 años, Maimará, Estudiante.
-- Alan Calisaya
+- Alan Calisaya, 22 años, San Salvador de Jujuy, Estudiante.
 
 ## Referencias
 
