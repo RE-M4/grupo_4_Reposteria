@@ -15,6 +15,8 @@
 - Fernando Singh, 23 años, San Pedro de Jujuy, Estudiante.
 - Gabriel Céspedes, 17 años, San Salvador de Jujuy, Estudiante.
 - Jorge Alejandro Ramos, 20 años, Palpalá, Estudiante.
+- Rafael Cussi
+- Alan Calisaya
 
 ## Referencias
 
