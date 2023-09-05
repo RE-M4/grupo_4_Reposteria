@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+  <link rel="stylesheet" href="./public/css/cargarProducto.css">
+  <title>Creación y Edición de Productos</title>
+<body>
+  <h1>Creación y Edición de Productos</h1>
+  <form action="#" method="post" enctype="multipart/form-data" class="larger-form">
+    <label for="name">Nombre del producto:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="description">Descripción:</label>
+    <textarea id="description" name="description" required></textarea>
+
+    <label for="image">Imagen:</label>
+    <input type="file" id="image" name="image" accept="image/*" required>
+
+    <label for="category">Categoría:</label>
+  <select id="category" name="category">
+    <option value="pasteles">Pasteles</option>
+    <option value="budines">Budines</option>
+    <option value="galletas">Galletas</option>
+    <!-- Agregar categoria-->
+  </select>
+
+    <label for="colors">Colores:</label>
+  <div class="color-checkboxes">
+    <label><input type="checkbox" name="color" value="red"> Rojo</label>
+    <label><input type="checkbox" name="color" value="blue"> Azul</label>
+    <label><input type="checkbox" name="color" value="green"> Verde</label>
+    <!-- Agregar colores -->
+  </div>
+
+    <label for="price">Precio:</label>
+    <input type="number" id="price" name="price" step="0.01" required>
+
+    <div class="button-container">
+
+        <button type="submit">Guardar Producto</button>
+        
+    </div>
+    
+  </form>
+  <%- include('./partials/footer') %>
+</body>
+</html>

@@ -15,6 +15,8 @@
 - Fernando Singh, 23 años, San Pedro de Jujuy, Estudiante.
 - Gabriel Céspedes, 17 años, San Salvador de Jujuy, Estudiante.
 - Jorge Alejandro Ramos, 20 años, Palpalá, Estudiante.
+- Rafael Cussi, 16 años, Maimará, Estudiante.
+- Alan Calisaya
 
 ## Referencias
 
@@ -36,7 +38,10 @@
    - Se toma como referencia el diseño de pie de página.
 
 ## Tecnologías
-- HTML
+### FrontEnd
+- HTML / EJS
 - CSS
+### BackEnd
 - JavaScript
-- React
+- Express / NodeJS
+- Multer
