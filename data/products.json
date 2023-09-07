@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "CheeseCake",
+    "price": 2099,
+    "discount": 18,
+    "description": "Zesty lemon cake with lemon glaze",
+    "ingredients": "eggs",
+    "image": "http://dummyimage.com/173x100.png/dddddd/000000"
+  },
+  {
+    "id": 2,
+    "name": "Lemon Pie",
+    "price": 1840,
+    "discount": 25,
+    "description": "Light and airy vanilla cake with buttercream frosting",
+    "ingredients": "butter",
+    "image": "http://dummyimage.com/198x100.png/cc0000/ffffff"
+  },
+  {
+    "id": 3,
+    "name": "Lemon Pie",
+    "price": 2738,
+    "discount": 24,
+    "description": "Delicious carrot cake with cream cheese frosting",
+    "ingredients": "cream",
+    "image": "http://dummyimage.com/140x100.png/5fa2dd/ffffff"
+  },
+  {
+    "id": 4,
+    "name": "Chocolate Cake",
+    "price": 2778,
+    "discount": 40,
+    "description": "Zesty lemon cake with lemon glaze",
+    "ingredients": "eggs",
+    "image": "http://dummyimage.com/210x100.png/5fa2dd/ffffff"
+  },
+  {
+    "id": 5,
+    "name": "Lemon Pie",
+    "price": 2462,
+    "discount": 36,
+    "description": "Moist and fluffy chocolate cake with rich ganache frosting",
+    "ingredients": "salt",
+    "image": "http://dummyimage.com/138x100.png/5fa2dd/ffffff"
+  },
+  {
+    "id": 6,
+    "name": "CheeseCake",
+    "price": 2334,
+    "discount": 25,
+    "description": "Delicious carrot cake with cream cheese frosting",
+    "ingredients": "cocoa powder",
+    "image": "http://dummyimage.com/179x100.png/5fa2dd/ffffff"
+  },
+  {
+    "id": 7,
+    "name": "Chocolate Cake",
+    "price": 2207,
+    "discount": 23,
+    "description": "Moist and fluffy chocolate cake with rich ganache frosting",
+    "ingredients": "eggs",
+    "image": "http://dummyimage.com/214x100.png/cc0000/ffffff"
+  },
+  {
+    "id": 8,
+    "name": "Chocolate Cake",
+    "price": 2477,
+    "discount": 15,
+    "description": "Decadent red velvet cake with cream cheese frosting",
+    "ingredients": "flour",
+    "image": "http://dummyimage.com/169x100.png/ff4444/ffffff"
+  },
+  {
+    "id": 9,
+    "name": "CheeseCake",
+    "price": 1498,
+    "discount": 14,
+    "description": "Decadent red velvet cake with cream cheese frosting",
+    "ingredients": "vanilla extract",
+    "image": "http://dummyimage.com/225x100.png/cc0000/ffffff"
+  },
+  {
+    "id": 10,
+    "name": "CheeseCake",
+    "price": 1688,
+    "discount": 34,
+    "description": "Decadent red velvet cake with cream cheese frosting",
+    "ingredients": "milk",
+    "image": "http://dummyimage.com/162x100.png/cc0000/ffffff"
+  }
+]
