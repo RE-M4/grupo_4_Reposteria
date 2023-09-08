@@ -1,3 +1,27 @@
+/*Agregando mas estilos*/
+header{
+    background-color:rgb(177, 211, 211);
+    border: solid rgb(108, 151, 151) 2px;
+    border-radius: 20px;
+    margin: 30%;
+    width: auto;
+}
+input{
+    border-radius: 50px;
+    background-color: white;
+    
+}
+label{
+    color: rgb(47, 78, 78);
+    font-family: cursive;
+}
+h1{
+    color:rgb(47, 78, 78); 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    margin-bottom: 0px;
+}
+
+/**/
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -39,7 +63,7 @@ body {
 .input-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 label {
@@ -109,25 +133,28 @@ input[type="password"] {
     padding: 15px;
     font-size: 1.2rem; 
     border-radius: 7px;
-    width: 100%; 
+    width: auto; 
+    border-radius: 50px;
+    background-color: white
 }
 
 
 button {
-    background-color: #333;
+    background-color:rgb(47, 78, 78);
     color: #fff;
     padding: 10px 10px;  
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 30%;  
-    margin-left: 75%;  
+    width: 35%;  
+    margin-left: 33%;  
     display: block;
 }
 
 .input-group a {
     margin-top: 10px;
     display: block;
+    color: rgb(108, 151, 151)
 }
 
 .input-group p {
@@ -136,14 +163,12 @@ button {
 }
 
 h1 {
-    margin: 0;
-    font-size: 40px; 
+    font-size: 40px;
 }
 
 .title-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: -80px; 
+    justify-content: center; 
 }
 
