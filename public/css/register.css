@@ -1,4 +1,4 @@
-/*Agregando mas estilos*/
+/*Agregando Estilos a register.ejs*/
 header{ 
     background-color:rgb(177, 211, 211);
     border: solid rgb(108, 151, 151) 2px;
@@ -30,7 +30,7 @@ input:hover::placeholder{
     transition: transform 1.5s ease, background-color 1s ease;
     color: white;    
 }
-/**/ 
+        /*---*/ 
 body{
     background-color:  #DDE6F8;
     border: solid 2px rgb(255, 255, 255);

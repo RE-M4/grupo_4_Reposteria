@@ -1,4 +1,4 @@
-/*Agregando mas estilos*/
+/*Agregando Estilos a login-container*/
 header{
     background-color:rgb(177, 211, 211);
     border: solid rgb(108, 151, 151) 2px;
@@ -21,7 +21,7 @@ h1{
     margin-bottom: 0px;
 }
 
-/**/
+          /*---*/
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;

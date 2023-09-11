@@ -39,11 +39,6 @@ section {
 body {
     background-color: #DDE6F8;
 }
-
-h2 {
-    text-align: center;
-}
-
 /* TITULO */
 .titulo-principal {
     display: none;
@@ -51,7 +46,6 @@ h2 {
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #3D776C;
 }
 
 /* IMÁGENES */
@@ -72,27 +66,33 @@ h2 {
     height: 100px;
 }
 
+/*Agregando Estilos a el nav-principal del header.ejs*/
 .barra-navegacion {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    width: 100%;
+    align-items:center;
+    font-family: poppins;
+    color: rgb(108, 151, 151)
 }
 
 .nav-principal {
     display: flex;
-    width: 60%;
+    width: 50%;
     justify-content: space-around;
     text-transform: uppercase;
-    border: 1px black solid;
+    border: solid 3px rgb(108, 151, 151) ;
+    border-radius: 10px;
+    background-color: rgb(177, 211, 211);
+    padding: 10px;
 }
 
 .nav-principal a {
-    color: black;
-    font-weight: bold;
+    color: rgb(44, 97, 97);
+    font-weight: 500;
     text-decoration: none;
     font-size: large;
     margin-left: 3px;
+    font-size: 18px;
 }
 
 .nav-principal p {
@@ -101,8 +101,11 @@ h2 {
 }
 
 .nav-principal p:hover {
-    font-size: 25px;
+    font-size: 22px;
+    color: rgb(44, 97, 97);
 }
+
+        /*---*/
 
 .nav-secundaria {
     display: flex;
@@ -170,24 +173,77 @@ h2 {
 #instagram {
     margin-left: 5px;
 }
-
+ /*Agregando Estilos a las imagenes y al main-informacion*/
 /* MAIN */
-.contenedor-carrusel {
+.contenedor-carrusel{
     display: flex;
-    justify-content: center;
-    margin-top: 30px;
+   height: 30rem;
+   gap: 1.5rem;
+   max-width: 100%;
+   margin-top: 20px;
+   margin-bottom: 10px;
+}
+.contenedor-carrusel > img {
+flex: 2;
+border-radius: 1rem;
+background-position: center;
+background-repeat: no-repeat;
+background-size: auto 100%;
+transition: all .8s cubic-bezier(0.55, 0.85, 0.68, 1.0);
+width: 10%;
+height: auto;
+
+}
+.contenedor-carrusel > img:hover{
+    flex: 2.8;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: cursive;
+    font-weight: 200;
+    background-color: rgb(177, 211, 211);
+    border-radius: 5% /90%;
+    color: rgb(44, 97, 97);
+    padding: 0px;
+    width: 55%;
+}    
+h2:hover{
+    transform: scale(1.1); 
+    background-color:rgb(108, 151, 151);
+    transition: transform 1s ease, background-color 1s ease;
+    color: white;
 }
 
 .main-informacion {
-    width: 60%;
-    border: 1px black solid;
+    display: grid;
+    border: solid 3px rgb(108, 151, 151);
+    border-radius: 64px 48px 16px 96px;
     padding: 5%;
     text-align: justify;
-}
+    padding: 28px;
+    place-items: center;
+    background-color: #DAFAFF;
+}    
 
 .main-informacion p {
-    margin-top: 7px;
+    margin:10px;
+    font-size: 16px;
+    font-family: cursive;
+    font-weight:0;
+    border-radius: 18% 14%;
+    padding: 30px;
+    background-color: rgb(177, 211, 211);
+    color: rgb(44, 97, 97) ;
 }
+.parrafo:hover{
+    transform: scale(1.05); 
+    background-color:rgb(108, 151, 151);
+    transition: transform 1s ease, background-color 1s ease;
+    color: white;
+}
+         /*---*/
 
 .main-imagenes {
     width: 30%;
