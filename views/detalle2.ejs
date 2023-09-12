@@ -14,14 +14,14 @@
         <div class="seccion">
             <div class="producto">
                 <div class="imagen-producto">
-                    <img src="prueba.jpg" alt="Descripción de la imagen">
-                    <div class="precio">Precio: $100</div>
+                    <img src="<%= product.image %>" alt="Descripción de la imagen">
+                    <div class="precio">Precio: $<%= product.price %></div>
                     <div class="descuento">Descuento: 10%</div>
                 </div>
                 <div class="descripcion-producto">
-                    <h2>Nombre del Producto</h2>
+                    <h2><%= product.name %></h2>
                     <div class="texto-descripcion">
-                        Aquí puedes escribir la descripción del producto.
+                        <%= product.description %>
                     </div>
                 </div>
                 
