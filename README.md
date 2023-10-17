@@ -39,9 +39,6 @@
 
 ## Tecnologías
 ### FrontEnd
-- HTML / EJS
-- CSS
+- A definir.
 ### BackEnd
-- JavaScript
-- Express / NodeJS
-- Multer
+- A definir.
