@@ -37,6 +37,8 @@
 8. Away Travel: https://www.awaytravel.com/
    - Se toma como referencia el diseño de pie de página.
 
+Se utiliza los proyectos de GitHub como tablero de trabajo.
+
 ## Tecnologías
 ### FrontEnd
 - A definir.
