@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const userController = require('../controllers/userController')
+const userController = require('../controllers/usersController')
 
 
 // Middleware para verificar si el usuario está logueado
@@ -28,10 +28,10 @@ router.get('/login', guestMiddleware, userController.logIn);
 // Rutas para registro, inicio de sesión y cierre de sesión
 
 router.get('/register', guestMiddleware, userController.register); // Solo accesible si no estás logueado
-router.post('/register', guestMiddleware, usersController.create); // Solo accesible si no estás logueado
-router.get('/login', guestMiddleware, usersController.login);  // Solo accesible si no estás logueado
-router.post('/login', usersController.authenticate);
-router.get('/logout', authMiddleware, usersController.logout); //Solo accesible si estas logueado
+router.post('/register', guestMiddleware, userController.create); // Solo accesible si no estás logueado
+router.get('/login', guestMiddleware, userController.logIn);  // Solo accesible si no estás logueado
+router.post('/login', userController.authenticate);
+router.get('/logout', authMiddleware, userController.logout); //Solo accesible si estas logueado
 router.get('/profile', authMiddleware, userController.profile);
 
 
