@@ -15,7 +15,7 @@ app.use(express.static(publicPath))
 app.use(methodOverride('_method'))
 app.use(express.json());
 
-app.set('views', path.join(__dirname, './src/views'));
+app.set('views', [path.join(__dirname, './src/views'),path.join(__dirname, './src/views/products'),path.join(__dirname, './src/views/users')]);
 app.set('view engine', 'ejs'); 
 
 /** ROUTERS */
