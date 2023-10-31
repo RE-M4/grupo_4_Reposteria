@@ -1,11 +1,3 @@
-/** COLORES */
-
-/*
-    Barra de navegación/Pie de página: #DAFAFF
-    Texto de footer: #EF9AC6
-    Fondos: #DDE6F8
-*/
-
 /** GLOBAL */
 * {
     margin: 0px;
@@ -143,106 +135,134 @@ header {
     margin-right: 10px;
 }
 
-/** INDEX */
-main {
-    width: 95%;
-    margin: auto;
-}
-
-section {
-    display: flex;
-    width: 80%;
-    padding: 3%;
-    margin: auto;
-    justify-content: space-between;
-}
+/** DETAILS */
 
 body {
-    background-color: #DDE6F8;
+    background-color: #E0F7FA;
 }
 
-h2 {
-    text-align: center;
-    font-size: 30px;
-    font-family: cursive;
-    font-weight: 200;
-    background-color: rgb(177, 211, 211);
-    border-radius: 5% /90%;
-    color: rgb(44, 97, 97);
-    padding: 0px;
-    width: 55%;
+.product-image {
+    width: 50%
 }
 
-h2:hover{
-    transform: scale(1.1); 
-    background-color:rgb(108, 151, 151);
-    transition: transform 1s ease, background-color 1s ease;
-    color: white;
-}
-
-.main-informacion {
-    display: grid;
-    border: solid 3px rgb(108, 151, 151);
-    border-radius: 10px;
-    padding: 5%;
-    text-align: justify;
-    padding: 28px;
-    place-items: center;
-    background-color: #DAFAFF;
-}    
-
-.main-informacion p {
-    margin:10px;
-    font-size: 16px;
-    font-family: cursive;
-    font-weight:0;
-    border-radius: 10px;
-    padding: 30px;
-    background-color: rgb(177, 211, 211);
-    color: rgb(44, 97, 97) ;
-}
-
-.parrafo:hover{
-    transform: scale(1.05); 
-    background-color:rgb(108, 151, 151);
-    transition: transform 1s ease, background-color 1s ease;
-    color: white;
-}
-
-/** TITULO */
-.titulo-principal {
-    /*display: flex;*/
-    display: none;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-/** IMÁGENES */
-/*.imagen-carrusel {
-    width: 50vh;
-    height: 50vh;
-}*/
-
-/** CARRUSEL DE IMÁGENES */
-/*.contenedor-carrusel{
+.detail-container {
     display: flex;
-    height: 30rem;
-    gap: 1.5rem;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+
+.related-container {
+    width: 100%;
+}
+
+/*.seccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+}
+
+.producto {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 100px; 
+}
+
+.imagen-producto img {
     max-width: 100%;
+}
+
+.imagen-producto {
+    margin-right: 20px; 
+}
+
+.precio, .descuento {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.descripcion-producto {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 150px;
+    width: 300px;
+    max-width: 20%;
+  
+}
+
+.descripcion-producto h2 {
+    margin-top: 0;    
+    margin-bottom: 5px;  
+}
+
+.texto-descripcion {
+    margin: 0;   
+}
+
+.opciones {
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
-    margin-bottom: 10px;
+    align-items: center;
 }
-.contenedor-carrusel > img {
-    flex: 2;
-    border-radius: 1rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    transition: all .8s cubic-bezier(0.55, 0.85, 0.68, 1.0);
-    width: 10%;
-    height: auto;
+
+button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 600px;
+    font-size: 20px;
 }
-.contenedor-carrusel > img:hover{
-    flex: 2.8;
+
+button:hover {
+    background-color: darkblue;
+}
+
+.cantidad{
+    font-size: 30px;
+    margin-left: 1060px;
+}
+
+.titulo-relacionados {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.productos-relacionados {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 20px; 
+}
+
+.producto-relacionado {
+    width: calc(33.33% - 20px); 
+    box-sizing: border-box; 
+    padding: 0 10px; 
+    text-align: center;
+}
+
+.nombre-producto, .precio-producto {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.cantidad input[type="number"] {
+    font-size: 25px;      
+    padding: 5px 10px;   
+    width: 100px;          
+    height: 30px;         
 }*/

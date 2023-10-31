@@ -17,14 +17,14 @@ function updateDB(){
 
 const productsController = {
     all : function(req,res){
-        res.render('productos', {products: products})
+        res.render('products', {products: products})
     },
     details : function(req,res){
         let id = req.params.id;
         let productFound = products.find(function(product){
             return product.id == id;
         })
-        res.render('detalle2', {product: productFound})
+        res.render('product-detail', {product: productFound})
     },
     create : function(req,res){
         res.render('cargarProducto');

@@ -22,14 +22,14 @@ function guestMiddleware(req, res, next) {
 }
 
 
-router.get('/signup', guestMiddleware, userController.signUp); //Solo accesible si no estas logueado
-router.get('/login', guestMiddleware, userController.logIn);
+router.get('/signup', guestMiddleware, userController.signup); //Solo accesible si no estas logueado
+router.get('/login', guestMiddleware, userController.login);
 
 // Rutas para registro, inicio de sesión y cierre de sesión
 
 router.get('/register', guestMiddleware, userController.register); // Solo accesible si no estás logueado
 router.post('/register', guestMiddleware, userController.create); // Solo accesible si no estás logueado
-router.get('/login', guestMiddleware, userController.logIn);  // Solo accesible si no estás logueado
+router.get('/login', guestMiddleware, userController.login);  // Solo accesible si no estás logueado
 router.post('/login', userController.authenticate);
 router.get('/logout', authMiddleware, userController.logout); //Solo accesible si estas logueado
 router.get('/profile', authMiddleware, userController.profile);

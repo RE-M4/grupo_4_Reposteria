@@ -1,11 +1,3 @@
-/** COLORES */
-
-/*
-    Barra de navegación/Pie de página: #DAFAFF
-    Texto de footer: #EF9AC6
-    Fondos: #DDE6F8
-*/
-
 /** GLOBAL */
 * {
     margin: 0px;
@@ -143,106 +135,36 @@ header {
     margin-right: 10px;
 }
 
-/** INDEX */
+/** PRODUCTS */
 main {
     width: 95%;
     margin: auto;
-}
-
-section {
-    display: flex;
-    width: 80%;
-    padding: 3%;
-    margin: auto;
-    justify-content: space-between;
 }
 
 body {
     background-color: #DDE6F8;
 }
 
-h2 {
-    text-align: center;
-    font-size: 30px;
-    font-family: cursive;
-    font-weight: 200;
-    background-color: rgb(177, 211, 211);
-    border-radius: 5% /90%;
-    color: rgb(44, 97, 97);
-    padding: 0px;
-    width: 55%;
-}
-
-h2:hover{
-    transform: scale(1.1); 
-    background-color:rgb(108, 151, 151);
-    transition: transform 1s ease, background-color 1s ease;
-    color: white;
-}
-
-.main-informacion {
-    display: grid;
-    border: solid 3px rgb(108, 151, 151);
-    border-radius: 10px;
-    padding: 5%;
-    text-align: justify;
-    padding: 28px;
-    place-items: center;
-    background-color: #DAFAFF;
-}    
-
-.main-informacion p {
-    margin:10px;
-    font-size: 16px;
-    font-family: cursive;
-    font-weight:0;
-    border-radius: 10px;
-    padding: 30px;
-    background-color: rgb(177, 211, 211);
-    color: rgb(44, 97, 97) ;
-}
-
-.parrafo:hover{
-    transform: scale(1.05); 
-    background-color:rgb(108, 151, 151);
-    transition: transform 1s ease, background-color 1s ease;
-    color: white;
-}
-
-/** TITULO */
-.titulo-principal {
-    /*display: flex;*/
-    display: none;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-/** IMÁGENES */
-/*.imagen-carrusel {
-    width: 50vh;
-    height: 50vh;
-}*/
-
-/** CARRUSEL DE IMÁGENES */
-/*.contenedor-carrusel{
+h1 {
     display: flex;
-    height: 30rem;
-    gap: 1.5rem;
-    max-width: 100%;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    justify-content: center;
+    padding: 10px 0px;
+    
 }
-.contenedor-carrusel > img {
-    flex: 2;
-    border-radius: 1rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    transition: all .8s cubic-bezier(0.55, 0.85, 0.68, 1.0);
-    width: 10%;
-    height: auto;
+
+.producto-imagen {
+    width: 50vh;
+    height: 40vh;
 }
-.contenedor-carrusel > img:hover{
-    flex: 2.8;
-}*/
+
+.producto-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.producto {
+    display: flex;
+    width: 50%;
+    padding: 10px 0px;
+    justify-content: center;
+}

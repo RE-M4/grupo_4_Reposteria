@@ -13,13 +13,13 @@ function addUser(user) {
 }
 
 const userController = {
-    signUp : function(req,res){
+    signup : function(req,res){
         res.render('register')
     },
     create: (req,res) =>{
         
     },
-    logIn : function(req,res){
+    login : function(req,res){
         res.render('login2')
     },
 
