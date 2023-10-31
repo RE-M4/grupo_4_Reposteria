@@ -24,7 +24,7 @@ const productsController = {
         let productFound = products.find(function(product){
             return product.id == id;
         })
-        res.render('product-detail', {product: productFound})
+        res.render('product-detail', {product: productFound, products: products})
     },
     create : function(req,res){
         res.render('cargarProducto');

@@ -6,7 +6,7 @@
     <body>
         <%- include('./partials/header') %>
         <div class="detail-container">
-            <div class="detail-info">
+            <div class="detail-info" id="detail-info-left">
                 <img class="product-image" src="<%= product.image %>" alt="imagen">
                 <span>Precio: $<%= product.price %></span>
                 <span>Descuento: <%= product.discount %>%</span>
@@ -23,23 +23,24 @@
             </div>
         </div>
         <div class="related-container">
-            <h2 class="titulo-relacionados">Productos Relacionados</h2>
-            <div class="productos-relacionados">
-                <div class="producto-relacionado">
-                    <img src="" alt="Descripción de la imagen 1">
-                    <p class="nombre-producto">Nombre Producto 1</p>
-                    <p class="precio-producto">$100.00</p>
-                </div>
-                <div class="producto-relacionado">
-                    <img src="" alt="Descripción de la imagen 2">
-                    <p class="nombre-producto">Nombre Producto 2</p>
-                    <p class="precio-producto">$200.00</p>
-                </div>
-                <div class="producto-relacionado">
-                    <img src="" alt="Descripción de la imagen 3">
-                    <p class="nombre-producto">Nombre Producto 3</p>
-                    <p class="precio-producto">$300.00</p>
-                </div>
+            <h2 class="related-title">Productos Relacionados</h2>
+            <div class="related-content">
+                <% results=0, i=0 %>
+                <% while(results<=2 && i<products.length) { %>
+                    <% if((product.type == products[i].type) && (product.id != products[i].id)){ %>
+                        <div class="related-product">
+                            <img class="related-image" src="<%= products[i].image %>" alt="imagen">
+                            <a href="/products/details/<%= products[i].id %>">
+                                <p class="related-name"><%= products[i].name %></p>
+                                <p class="related-price">$<%= products[i].price %></p>
+                            </a>
+                        </div>
+                        <% results++ %>
+                        <% i++ %>
+                    <% } else { %>
+                        <% i++ %>
+                    <% } %>
+                <% } %>
             </div>
         </div>
         <%- include('./partials/footer') %>
