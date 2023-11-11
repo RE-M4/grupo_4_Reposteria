@@ -20,7 +20,7 @@ const userController = {
         
     },
     login : function(req,res){
-        res.render('login2')
+        res.render('login')
     },
 
     authenticate: function(req, res){

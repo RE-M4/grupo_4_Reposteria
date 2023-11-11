@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Inicio de sesión</title>
+    <body>
+        <main>
+            <h1>Inicio de sesión</h1>
+            <form action="/" method="POST" class="form">
+                <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <div class="remember-me">
+                    <label for="remember-me">Recuérdame:
+                        <input type="checkbox" id="remember-me" name="remember-me">
+                    </label>
+                </div>
+                <div class="password-recover">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="button-options">
+                    <button type="submit" class="option">Iniciar sesión</button>
+                    <a href="/" class="button">Volver</button></a>
+                </div>
+                <small class="signup-message">¿No tenés una cuenta? <a href="/user/signUp">Crear una cuenta</a></small>
+            </form>
+        </main>
+    </body>
+</html>

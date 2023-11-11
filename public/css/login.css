@@ -32,14 +32,13 @@ h1 {
 }
 
 /** FORMULARIO */
-
 .form {
     display: flex;
     flex-direction: column;
     margin-top: 4%;
 }
 
-.form input {
+.form input[id="email"], input[id="password"]{
     display: flex;
     justify-content: center;
     margin: auto;
@@ -57,13 +56,15 @@ h1 {
     color: rgba(126, 158, 158, 0.884);
 }
 
-/*
-.form input:hover::placeholder{
-    transform: scale(1.1); 
-    background-color: rgb(44, 97, 97);
-    transition: transform 1.5s ease, background-color 1s ease;
-    color: white;    
-}*/
+.remember-me {
+    margin-top: 2%;
+    margin-left: 25%;
+}
+
+.password-recover {
+    margin-top: 2%;
+    margin-left: 25%;
+}
 
 /** BOTONES */
 .button-options {
@@ -111,10 +112,10 @@ h1 {
     color: white;
 }
 
-.login-message {
+.signup-message {
     margin-top: 10%;
 }
 
-.login-message a {
+.signup-message a {
     text-decoration: none;
 }

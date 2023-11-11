@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include('./partials/head') %>
-  <link rel="stylesheet" href="/css/register.css"/>
-  <title>Registro de Usuario</title>
-<body>
-  <header class="user">
-    <!-- <img src="/images/logo-sin-fondo.png" alt="" class="logo-prin"> -->
-    
-  <div class="registro">
-  <h1>Registro de Usuario</h1>
-  </div>
-  <form action="/" method="POST"> <!-- Reemplaza "index.html" con la página principal -->
-    <label for="nombre"></label>
-    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required></br>
-    <label for="apellido"></label></form><br>
-    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required></br>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/register.css" />
+    <title>Registro de Usuario</title>
+    <body>
+        <main>
+            <h1>Registro de Usuario</h1>
+            <form action="/" method="POST" class="form">
+                <label for="nombre"></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <label for="apellido"></label>
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
 
-    <label for="correo"></label><br>
-    <input type="text" id="correo"name="correo"placeholder="Correo electronico" required><br>
+                <label for="email"></label>
+                <input type="text" id="email" name="email" placeholder="Correo Electrónico" required>
 
-    <label for="domicilio"></label></br>
-    <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required></br>
+                <label for="domicilio"></label>
+                <input type="email" id="domicilio" name="domicilio" placeholder="Domicilio" required>
 
-    <label for="password"></label></br>
-    <input type="password" id="password" name="password" placeholder="Contraseña" required></br>
-    <label for="confirm_password"></label></br> 
-    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmar contraseña" required></br>
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <label for="confirm-password"></label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña" required>
 
-    <button type="submit" id="crear">Crear cuenta</button>
-    <button type="button" id="volver">Volver</button>
+                <div class="button-options">
+                    <button type="submit" class="option">Crear cuenta</button>
+                    <a href="/" class="button">Volver</button></a>
+                </div>
 
-    <a href="/logIn"><span>Crear una cuenta</span></a>
-  </form>
-</header>
-</body>
+                <small class="login-message">¿Ya tenés una cuenta? <a href="/user/logIn">Iniciar sesión</a></small>
+            </form>
+        </main>
+    </body>
 </html>
