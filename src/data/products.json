@@ -29,7 +29,7 @@
     "description": "Descripción para un producto",
     "ingredients": "Ingredientes para un producto",
     "image": "/images/ejemplo.png",
-    "type": "torta",
+    "type": "masa-dulce",
     "stock": 5
   },
   {
@@ -40,7 +40,7 @@
     "description": "Descripción para un producto",
     "ingredients": "Ingredientes para un producto",
     "image": "/images/ejemplo.png",
-    "type": "galleta",
+    "type": "masa-dulce",
     "stock": 2
   },
   {
@@ -51,7 +51,7 @@
     "description": "Descripción para un producto",
     "ingredients": "Ingredientes para un producto",
     "image": "/images/ejemplo.png",
-    "type": "galleta",
+    "type": "masa-dulce",
     "stock": 100
   }
 ]

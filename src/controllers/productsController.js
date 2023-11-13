@@ -27,7 +27,7 @@ const productsController = {
         res.render('product-detail', {product: productFound, products: products})
     },
     create : function(req,res){
-        res.render('cargarProducto');
+        res.render('product-create');
     },
     store : function(req,res){
         let formData = req.body;
@@ -47,7 +47,7 @@ const productsController = {
         let productFound = products.find(function(product){
             return product.id == id;
         })
-        res.render('editarProducto', {product: productFound})
+        res.render('product-edit', {product: productFound})
     },
     update : function(req,res){
         let id = req.params.id;

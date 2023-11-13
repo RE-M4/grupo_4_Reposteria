@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/product-create.css">
+    <title>Nuevo Producto</title>
+    <body>
+        <main>
+            <h1>Agregar Nuevo Producto</h1>
+            <form action="/" method="POST" class="form">
+                <label for="nombre"></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <label for="precio"></label>
+                <input type="number" id="precio" name="precio" placeholder="Precio" required>
+
+                <label for="descuento"></label>
+                <input type="number" id="descuento" name="descuento" placeholder="Descuento" required>
+
+                <div class="text-area">
+                    <label for="descripcion"></label>
+                    <textarea name="descripcion" id="descripcion" cols="50" rows="5" placeholder="Una descripción" required></textarea>
+
+                    <label for="ingredientes"></label>
+                    <textarea name="ingredientes" id="ingredientes" cols="50" rows="5" placeholder="Lista de ingredientes" required></textarea>
+                </div>
+
+                <div class="carga-imagen">
+                    <label for="imagen"></label>
+                    <input type="file" id="imagen" name="imagen" required>
+                </div>
+
+                <div class="tipo">
+                    <label for="tipo"></label>
+                    <select name="tipo" id="tipo" required>
+                        <option value="torta">Torta</option>
+                        <option value="masa-dulce">Masa Dulce</option>
+                    </select>
+                </div>
+
+                <label for="stock"></label>
+                <input type="number" id="stock" name="stock" placeholder="Stock" required>
+
+                <div class="button-options">
+                    <button type="submit" class="option">Agregar Producto</button>
+                    <a href="/" class="button">Volver</button></a>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
