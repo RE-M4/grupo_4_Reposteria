@@ -1,8 +1,8 @@
 /** IMPORTS */
-const express = require('express')
-const path = require('path')
-const methodOverride = require('method-override');
-const session = require('express-session')
+const express = require('express'); //Se importa Express.
+const path = require('path'); //Se importa Path para hacer uso de funciones que controlan rutas de archivos.
+const methodOverride = require('method-override'); //Se importa Method Override para hacer uso de los métodos PUT y DELETE.
+const session = require('express-session'); //Se importa Express Sesion para hacer uso de sesiones de usuario.
 
 /** IMPORTS DE ROUTERS */
 const indexRouter = require('./src/routes/index');
@@ -11,14 +11,15 @@ const productsRouter = require('./src/routes/products');
 
 /** CONFIG */
 const app = express();
-const publicPath = path.resolve(__dirname,"./public")
-app.use(express.static(publicPath))
-app.use(methodOverride('_method'))
-app.use(express.json());
-app.use(session({secret:'secret'}))
+const publicPath = path.resolve(__dirname,"./public"); //La variable contiene la ruta de archivos públicos.
+app.use(express.urlencoded({ extended: false })); //Se declara a Express que capture los datos de un formulario y los trabaje como objetos literales.
+app.use(express.static(publicPath)); //Se declara a Express la ruta de archivos públicos.
+app.use(methodOverride('_method')); //Configuración de Method Override.
+app.use(express.json()); //Se declara a Express que puede hacer uso de archivos JSON. 
+app.use(session({secret:'secret'})); //Configuración de Express Session.
 
-app.set('views', [path.join(__dirname, './src/views'),path.join(__dirname, './src/views/products'),path.join(__dirname, './src/views/users')]);
-app.set('view engine', 'ejs'); 
+app.set('views', [path.join(__dirname, './src/views'),path.join(__dirname, './src/views/products'),path.join(__dirname, './src/views/users')]); //Se declara a EJS dónde debe buscar los archivos de vista.
+app.set('view engine', 'ejs'); //Se declara a Express que use EJS como Template Engine.
 
 /** ROUTERS */
 app.use(indexRouter);

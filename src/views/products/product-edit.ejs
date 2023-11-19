@@ -6,26 +6,26 @@
     <body>
         <main>
             <h1>Editar un Producto</h1>
-            <form action="/" method="POST" class="form">
+            <form action="/products/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="POST" class="form">
                 <label for="nombre"></label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input type="text" id="nombre" name="nombre" required value="<%= product.name %>">
                 <label for="precio"></label>
-                <input type="number" id="precio" name="precio" required>
+                <input type="number" id="precio" name="precio" required value="<%= product.price %>">
 
                 <label for="descuento"></label>
-                <input type="number" id="descuento" name="descuento" required>
+                <input type="number" id="descuento" name="descuento" required value="<%= product.discount %>">
 
                 <div class="text-area">
                     <label for="descripcion"></label>
-                    <textarea name="descripcion" id="descripcion" cols="50" rows="5" required></textarea>
+                    <textarea name="descripcion" id="descripcion" cols="50" rows="5" required ><%= product.description%></textarea>
 
                     <label for="ingredientes"></label>
-                    <textarea name="ingredientes" id="ingredientes" cols="50" rows="5" required></textarea>
+                    <textarea name="ingredientes" id="ingredientes" cols="50" rows="5" required ><%= product.ingredients %></textarea>
                 </div>
 
                 <div class="carga-imagen">
                     <label for="imagen"></label>
-                    <input type="file" id="imagen" name="imagen" required>
+                    <input type="file" id="imagen" name="imagen" required value="<%= product.image %>">
                 </div>
 
                 <div class="tipo">
@@ -37,7 +37,7 @@
                 </div>
 
                 <label for="stock"></label>
-                <input type="number" id="stock" name="stock" placeholder="Stock" required>
+                <input type="number" id="stock" name="stock" required value="<%= product.stock %>">
 
                 <div class="button-options">
                     <button type="submit" class="option">Guardar cambios</button>
