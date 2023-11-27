@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('./partials/head') %>
+    <title>Perfil</title>
+    <link rel="stylesheet" href="/css/profile.css">
+    <body>
+        <%- include('./partials/header') %>
+        <main>
+            <figure><img src="/images/users/<%= user.image %>" alt="profile-picture"></figure>
+            <span><%= user.email %></span>
+            <form action="/user/logout" method="POST">
+                <button type="submit">Cerrar sesión</button>
+            </form>
+        </main>
+        <%- include('./partials/footer') %>
+    </body>
+</html>

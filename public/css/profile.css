@@ -1,0 +1,141 @@
+/** GLOBAL */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DDE6F8;
+}
+
+/** HEADER*/
+header {
+    background-color: #DAFAFF;
+    border-bottom: 1px black solid;
+}
+
+.barra-navegacion {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    font-family: poppins;
+    color: rgb(108, 151, 151)
+}
+
+.logo-contenedor {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+
+.logo-principal {
+    width: 100px;
+    height: 100px;
+}
+
+.nav-principal {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    text-transform: uppercase;
+    border: solid 3px rgb(108, 151, 151) ;
+    border-radius: 10px;
+    background-color: rgb(177, 211, 211);
+    padding: 10px;
+}
+
+.nav-principal a {
+    color: rgb(44, 97, 97);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: large;
+    margin-left: 3px;
+    font-size: 18px;
+}
+
+.nav-principal p {
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+.nav-principal p:hover {
+    font-size: 22px;
+    color: rgb(44, 97, 97);
+}
+
+.nav-secundaria {
+    display: flex;
+    width: 20%;
+    justify-content: end;
+    text-transform: uppercase;
+    color: white;
+    /*justify-content: space-around;*/
+}
+
+.boton-secundaria {
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton-secundaria:hover {
+    background-color: royalblue;
+}
+
+#boton-secundaria {
+    margin-right: 10px;
+}
+
+/** FOOTER */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #DAFAFF;
+    border-top: 1px black solid;;
+}
+
+.contenedor-footer {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.contenedor-footer ul a{
+    color: #EF8CA1;
+    text-decoration: none;
+    margin-left: 3px;
+}
+
+.contenedor-footer ul p {
+    margin-top: 8px;
+}
+
+.contenedor-footer .contenedor-redes-sociales {
+    display: flex;
+}
+
+.boton-footer {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border: none;
+    width: 30%;
+    padding: 5%;
+    border-radius: 10%;
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+.boton-footer:hover {
+    background-color: white;
+    color: black;
+    border: 1px black solid;
+}
+
+#instagram {
+    margin-left: 5px;
+}
+

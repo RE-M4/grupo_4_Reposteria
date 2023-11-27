@@ -56,9 +56,11 @@ h1 {
     color: rgba(126, 158, 158, 0.884);
 }
 
-.remember-me {
+.rememberme {
+    display: flex;
+    justify-content: center;
     margin-top: 2%;
-    margin-left: 25%;
+    margin-bottom: 2%;
 }
 
 .password-recover {

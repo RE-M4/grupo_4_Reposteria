@@ -1,13 +1,13 @@
 const express = require('express'); //Se importa Express.
-const router = express.Router(); // Se guarda la funcionalidad de Router en la variable.
+const router = express.Router(); //Se guarda la funcionalidad de Router en la variable.
 const productsController = require('../controllers/productsController'); //Se importa el controlador de Productos.
 const multer = require('multer'); //Se importa Multer para la subida y manejo de archivos en formularios.
-const path = require('path');
+const path = require('path'); //Se importa Path para hacer uso de funciones que controlan rutas de archivos.
 
 /** CONFIG */
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, path.resolve(__dirname, '../../public/images'))
+      cb(null, path.resolve(__dirname, '../../public/images/products'))
     },
     filename: function (req, file, cb) {
       const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)

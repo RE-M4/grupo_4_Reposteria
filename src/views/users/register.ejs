@@ -6,22 +6,25 @@
     <body>
         <main>
             <h1>Registro de Usuario</h1>
-            <form action="/" method="POST" class="form">
+            <form action="/user/register" method="POST" enctype="multipart/form-data" class="form">
                 <label for="nombre"></label>
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                 <label for="apellido"></label>
                 <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
 
                 <label for="email"></label>
-                <input type="text" id="email" name="email" placeholder="Correo Electrónico" required>
+                <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
 
                 <label for="domicilio"></label>
-                <input type="email" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+                <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
 
                 <label for="password"></label>
                 <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                <label for="confirm-password"></label>
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña" required>
+
+                <div class="carga-imagen">
+                    <label for="imagen"></label>
+                    <input type="file" name="imagen" id="imagen" required>
+                </div>
 
                 <div class="button-options">
                     <button type="submit" class="option">Crear cuenta</button>

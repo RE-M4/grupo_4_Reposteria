@@ -3,45 +3,20 @@
     "id": 1,
     "first_name": "Mauro",
     "last_name": "Rendón",
-    "email": "example@admin.com",
-    "password": "admin",
+    "email": "admin@admin.com",
+    "domicilio": "Ejemplo 1234",
+    "password": "$2a$10$rz31QrRxKsFPPSVoImvfo.TeuAjrkByFzPX.Y9YHKoSbHXLfsLR5y",
     "category": "admin",
-    "image": ""
+    "image": "/images/logo-sin-fondo.png"
   },
   {
     "id": 2,
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "example1@user.com",
-    "password": "user1",
-    "category": "user",
-    "image": ""
-  },
-  {
-    "id": 3,
     "first_name": "Jane",
     "last_name": "Doe",
-    "email": "example2@user.com",
-    "password": "user2",
+    "email": "ejemplo@user.com",
+    "domicilio": "Ejemplo 1234",
+    "password": "$2a$10$uAECKb1ZTua3tJyymUhi.uH2Va3JSgA08LAp4Pajlg2YiMcGuifOu",
     "category": "user",
-    "image": ""
-  },
-  {
-    "id": 4,
-    "first_name": "Juan",
-    "last_name": "Nadie",
-    "email": "example3@user.com",
-    "password": "user3",
-    "category": "user",
-    "image": ""
-  },
-  {
-    "id": 5,
-    "first_name": "Juana",
-    "last_name": "Nadie",
-    "email": "example4@user.com",
-    "password": "user4",
-    "category": "user",
-    "image": ""
+    "image": "/images/logo-sin-fondo.png"
   }
 ]

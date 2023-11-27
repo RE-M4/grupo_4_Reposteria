@@ -57,6 +57,12 @@ h1 {
     color: rgba(126, 158, 158, 0.884);
 }
 
+.carga-imagen {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
 /*
 .form input:hover::placeholder{
     transform: scale(1.1); 

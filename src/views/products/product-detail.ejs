@@ -7,7 +7,7 @@
         <%- include('./partials/header') %>
         <div class="detail-container">
             <div class="detail-info" id="detail-info-left">
-                <img class="product-image" src="/images/<%= product.image %>" alt="imagen">
+                <img class="product-image" src="/images/products/<%= product.image %>" alt="imagen">
                 <span>Precio: $<%= product.price %></span>
                 <span>Descuento: <%= product.discount %>%</span>
             </div>
@@ -32,7 +32,7 @@
                 <% while(results<=2 && i<products.length) { %>
                     <% if((product.type == products[i].type) && (product.id != products[i].id)){ %>
                         <div class="related-product">
-                            <img class="related-image" src="/images/<%= products[i].image %>" alt="imagen">
+                            <img class="related-image" src="/images/products/<%= products[i].image %>" alt="imagen">
                             <a href="/products/details/<%= products[i].id %>">
                                 <p class="related-name"><%= products[i].name %></p>
                                 <p class="related-price">$<%= products[i].price %></p>
