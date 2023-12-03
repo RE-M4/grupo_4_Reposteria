@@ -1,9 +1,10 @@
 const fs = require('fs'); //Se importa File System para lectura y escritura de archivos.
 const path = require('path'); //Se importa Path para hacer uso de funciones que controlan rutas de archivos. 
 const bcrypt = require('bcryptjs'); //Se importa BcryptJS para encriptar las contraseñas ingreadas por el formulario de ingreso.
+const db = require('../database/models') //Se guardan todos los modelos existentes creados a través de Sequelize.
 
-const usersFilePath = path.join(__dirname, '../data/users.json'); //La variable contiene la ruta en donde está el JSON de Usuarios.
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //La variable contiene el JSON de Usuarios convertido en un array de objetos.
+//const usersFilePath = path.join(__dirname, '../data/users.json'); //La variable contiene la ruta en donde está el JSON de Usuarios.
+//let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //La variable contiene el JSON de Usuarios convertido en un array de objetos.
 
 /**
  * Esta función guarda un objeto dentro del array de objetos,
@@ -11,11 +12,11 @@ let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //La variable c
  * /data/users.json con los cambios aplicados.
  * (Es llamada cada vez que se crea un nuevo usuario).
  */
-function addUser(user) {
+/*function addUser(user) {
     users.push(user);
     usersJSON = JSON.stringify(users);
     fs.writeFileSync(usersFilePath, usersJSON);
-}
+}*/
 
 /**
  * Esta función convierte la variable que contiene el array de
@@ -23,10 +24,10 @@ function addUser(user) {
  * cambios aplicados.
  * (Es llamada cada vez que se edita o elimina un usuario).
  */
-function updateDB(){
+/*function updateDB(){
     usersJSON = JSON.stringify(users);
     fs.writeFileSync(usersFilePath, usersJSON);
-}
+}*/
 
 /** CONTROLADOR */
 const userController = {
@@ -41,7 +42,16 @@ const userController = {
             error.httpStatusCode = 400
             return next(error)
         } else {
-            const newUser = {
+            db.User.create({
+                first_name: formData.nombre,
+                last_name: formData.apellido,
+                email: formData.email,
+                home: formData.domicilio,
+                user_password: bcrypt.hashSync(formData.password, 10),
+                category: "user",
+                image: formFile.filename
+            })
+            /*const newUser = {
                 id: users.length + 1,
                 first_name: formData.nombre,
                 last_name: formData.apellido,
@@ -51,7 +61,7 @@ const userController = {
                 category: "user",
                 image: formFile.filename
             }
-            addUser(newUser);
+            addUser(newUser); USADO PARA JSON.*/
             res.redirect('/');
         }
     },
@@ -60,20 +70,20 @@ const userController = {
     },
     authenticate: function(req, res){
         let formData = req.body;
-        let userFound = users.find(function(user){
-            return user.email == formData.email && bcrypt.compareSync(formData.password, user.password);
-        })
-        console.log("Dato de remember-me: " + formData.rememberme);
-        console.log("Tipo de dato de remember-me: " + typeof(formData.rememberme));
-        if(userFound){
-            req.session.user = userFound;
-            if(formData.rememberme != undefined){
-                res.cookie('userId', userFound.id, {maxAge: 30 * 24 * 60 * 60 * 1000});
+        db.User.findOne({where:{email: formData.email}}).then(function(userFound){
+            if(userFound && bcrypt.compareSync(formData.password, userFound.user_password)){
+                req.session.user = userFound;
+                if(formData.rememberme != undefined){
+                    res.cookie('userId', userFound.id, {maxAge: 30 * 24 * 60 * 60 * 1000});
+                }
+                res.redirect('/user/profile');
+            }else{
+                res.redirect('/user/login');
             }
-            res.redirect('/user/profile');
-        }else{
-            res.redirect('/user/login');
-        }
+        })
+        /*let userFound = users.find(function(user){
+            return user.email == formData.email && bcrypt.compareSync(formData.password, user.password) USADO PARA JSON.;
+        })*/
     },
     logout: function(req, res){
         req.session.destroy();

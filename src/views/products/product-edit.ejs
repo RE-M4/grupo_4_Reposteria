@@ -8,7 +8,7 @@
             <h1>Editar un Producto</h1>
             <form action="/products/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="POST" class="form">
                 <label for="nombre"></label>
-                <input type="text" id="nombre" name="nombre" required value="<%= product.name %>">
+                <input type="text" id="nombre" name="nombre" required value="<%= product.product_name %>">
                 <label for="precio"></label>
                 <input type="number" id="precio" name="precio" required value="<%= product.price %>">
 
@@ -17,7 +17,7 @@
 
                 <div class="text-area">
                     <label for="descripcion"></label>
-                    <textarea name="descripcion" id="descripcion" cols="50" rows="5" required ><%= product.description%></textarea>
+                    <textarea name="descripcion" id="descripcion" cols="50" rows="5" required ><%= product.product_description%></textarea>
 
                     <label for="ingredientes"></label>
                     <textarea name="ingredientes" id="ingredientes" cols="50" rows="5" required ><%= product.ingredients %></textarea>

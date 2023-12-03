@@ -1,0 +1,22 @@
+CREATE TABLE users(
+	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+	first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    email VARCHAR(30) NOT NULL UNIQUE,
+    home VARCHAR(50) NOT NULL,
+    user_password VARCHAR(100) NOT NULL,
+    category VARCHAR(5) NOT NULL,
+    image VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE products(
+	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    product_name VARCHAR(30) NOT NULL UNIQUE,
+    price SMALLINT NOT NULL,
+    discount SMALLINT NOT NULL,
+    product_description VARCHAR(200) NOT NULL,
+    ingredients VARCHAR(200) NOT NULL,
+    image VARCHAR(100) NOT NULL,
+    product_type VARCHAR(10) NOT NULL,
+    stock SMALLINT NOT NULL
+);

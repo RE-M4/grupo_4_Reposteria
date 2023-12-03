@@ -1,4 +1,4 @@
-/* GLOBAL */
+/** GLOBAL */
 * {
     margin: 0px;
     padding: 0px;
@@ -30,14 +30,14 @@ body {
     background-color: #DDE6F8;
 }
 
-/* IMÁGENES*/
+/** IMÁGENES */
 .logo-contenedor {
     display: flex;
     justify-content: center;
     width: 20%;
 }
 
-/* BARRA DE NAVEGACIÓN */
+/** NAVBAR */
 .logo-principal {
     width: 100px;
     height: 100px;
@@ -101,7 +101,7 @@ body {
     margin-right: 10px;
 }
 
-/* PIE DE PÁGINA*/
+/** FOOTER */
 .contenedor-footer {
     padding-top: 30px;
     padding-bottom: 40px;
@@ -142,7 +142,7 @@ body {
     margin-left: 5px;
 }
 
-/* MAIN */
+/** MAIN */
 h1 {
     margin-bottom: 1vh;
 }
@@ -189,7 +189,7 @@ td {
     margin-top: 7vh;
 }
 
-/* BOTONES */
+/** BOTONES */
 .boton-comprar {
     padding: 2%;
     background-color: dodgerblue;

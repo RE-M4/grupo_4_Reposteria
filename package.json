@@ -7,7 +7,9 @@
     "express-session": "^1.17.3",
     "method-override": "^3.0.0",
     "multer": "^1.4.5-lts.1",
-    "nodemon": "^3.0.1"
+    "mysql2": "^3.6.5",
+    "nodemon": "^3.0.1",
+    "sequelize": "^6.35.1"
   },
   "name": "grupo_4_reposteria",
   "description": "- Tortas\r - Tartas\r - Masas dulces\r - Especialidades",

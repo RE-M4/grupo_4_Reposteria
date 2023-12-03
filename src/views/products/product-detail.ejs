@@ -13,8 +13,8 @@
             </div>
             <div class="detail-info" id="detail-info-right">
                 <div class="detail-info-child">
-                    <span><%= product.name %></span>
-                    <span><%= product.description %></span>
+                    <span><%= product.product_name %></span>
+                    <span><%= product.product_description %></span>
                 </div>
                 <div class="options">
                     <span>Cantidad: <input type="number" value="1"></span>
@@ -30,11 +30,11 @@
             <div class="related-content">
                 <% results=0, i=0 %>
                 <% while(results<=2 && i<products.length) { %>
-                    <% if((product.type == products[i].type) && (product.id != products[i].id)){ %>
+                    <% if((product.product_type == products[i].product_type) && (product.id != products[i].id)){ %>
                         <div class="related-product">
                             <img class="related-image" src="/images/products/<%= products[i].image %>" alt="imagen">
                             <a href="/products/details/<%= products[i].id %>">
-                                <p class="related-name"><%= products[i].name %></p>
+                                <p class="related-name"><%= products[i].product_name %></p>
                                 <p class="related-price">$<%= products[i].price %></p>
                             </a>
                         </div>
