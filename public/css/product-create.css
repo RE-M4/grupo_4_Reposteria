@@ -127,5 +127,19 @@ h1 {
   transition: transform 1s ease, background-color 0.5s ease;
   color: white;
 }
- 
+
+.errorsBack {
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+
+.errorsFront {
+  color: red;
+}
+
+#errorsFront {
+  display: flex;
+  justify-content: center;
+}
   

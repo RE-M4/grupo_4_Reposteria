@@ -8,42 +8,101 @@
             <h1>Agregar Nuevo Producto</h1>
             <form action="/products/store" method="POST" enctype="multipart/form-data" class="form">
                 <label for="nombre"></label>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre"   value="<%= locals.oldData && oldData.nombre ? oldData.nombre : '' %>">
+                <div class="errorsBack">
+                    <% if (locals.errors && errors.nombre){ %>
+                        <small><%= errors.nombre.msg %></small>
+                    <% } %>
+                </div>
+                <div class="errorsFront" id="errorsFront">
+
+                </div>
                 <label for="precio"></label>
-                <input type="number" id="precio" name="precio" placeholder="Precio" required>
+                <input type="number" id="precio" name="precio" placeholder="Precio"   value="<%= locals.oldData && oldData.precio ? oldData.precio : '' %>">
+                <div class="errorsBack">
+                    <% if (locals.errors && errors.precio){ %>
+                        <small><%= errors.precio.msg %></small>
+                    <% } %>
+                </div>
+                <div class="errorsFront" id="errorsFront">
 
+                </div>
                 <label for="descuento"></label>
-                <input type="number" id="descuento" name="descuento" placeholder="Descuento" required>
+                <input type="number" id="descuento" name="descuento" placeholder="Descuento"   value="<%= locals.oldData && oldData.descuento ? oldData.descuento : '' %>">
+                <div class="errorsBack">
+                    <% if (locals.errors && errors.descuento){ %>
+                        <small><%= errors.descuento.msg %></small>
+                    <% } %>
+                </div>
+                <div class="errorsFront" id="errorsFront">
 
+                </div>
                 <div class="text-area">
                     <label for="descripcion"></label>
-                    <textarea name="descripcion" id="descripcion" cols="50" rows="5" placeholder="Una descripción" required></textarea>
+                    <textarea name="descripcion" id="descripcion" cols="50" rows="5" placeholder="Una descripción"  ><%= locals.oldData && oldData.descripcion ? oldData.descripcion : '' %></textarea>
+                    <div class="errorsBack">
+                        <% if (locals.errors && errors.descripcion){ %>
+                            <small><%= errors.descripcion.msg %></small>
+                        <% } %>
+                    </div>
+                    <div class="errorsFront">
 
+                    </div>
                     <label for="ingredientes"></label>
-                    <textarea name="ingredientes" id="ingredientes" cols="50" rows="5" placeholder="Lista de ingredientes" required></textarea>
-                </div>
+                    <textarea name="ingredientes" id="ingredientes" cols="50" rows="5" placeholder="Lista de ingredientes"  ><%= locals.oldData && oldData.ingredientes ? oldData.ingredientes : '' %></textarea>
+                    <div class="errorsBack">
+                        <% if (locals.errors && errors.ingredientes){ %>
+                            <small><%= errors.ingredientes.msg %></small>
+                        <% } %>
+                    </div>
+                    <div class="errorsFront">
 
+                    </div>
+                </div>
+                
                 <div class="carga-imagen">
                     <label for="imagen"></label>
-                    <input type="file" id="imagen" name="imagen" required>
+                    <input type="file" id="imagen" name="imagen"  >
                 </div>
+                <div class="errorsBack">
+                    <% if (locals.errors && errors.imagen){ %>
+                        <small><%= errors.imagen.msg %></small>
+                    <% } %>
+                </div>
+                <div class="errorsFront" id="errorsFront">
 
+                </div>
                 <div class="tipo">
                     <label for="tipo"></label>
-                    <select name="tipo" id="tipo" required>
+                    <select name="tipo" id="tipo"  >
                         <option value="torta">Torta</option>
                         <option value="masa-dulce">Masa Dulce</option>
                     </select>
                 </div>
+                <div class="errorsBack">
+                    <% if (locals.errors && errors.tipo){ %>
+                        <small><%= errors.tipo.msg %></small>
+                    <% } %>
+                </div>
+                <div class="errorsFront" id="errorsFront">
 
+                </div>
                 <label for="stock"></label>
-                <input type="number" id="stock" name="stock" placeholder="Stock" required>
+                <input type="number" id="stock" name="stock" placeholder="Stock"   value="<%= locals.oldData && oldData.stock ? oldData.stock : '' %>">
+                <div class="errorsBack">
+                    <% if (locals.errors && errors.stock){ %>
+                        <small><%= errors.stock.msg %></small>
+                    <% } %>
+                </div>
+                <div class="errorsFront" id="errorsFront">
 
+                </div>
                 <div class="button-options">
                     <button type="submit" class="option">Agregar Producto</button>
                     <a href="/" class="button">Volver</button></a>
                 </div>
             </form>
         </main>
+        <script src="/js/productCreateEdit.js"></script>
     </body>
 </html>

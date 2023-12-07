@@ -7,8 +7,26 @@
         <main>
             <h1>Inicio de sesión</h1>
             <form action="/user/login" method="POST" class="form">
-                <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
-                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Correo Electrónico" required value="<%= locals.oldData && oldData.email ? oldData.email : '' %>">
+                <div class="errorsBack">
+                    <% if (locals.errors && errors.email){ %>
+                        <small><%= errors.email.msg %></small>
+                    <% } %>
+                </div>
+                <div class="errorsFront">
+
+                </div>
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Contraseña" required value="<%= locals.oldData && oldData.password ? oldData.password : '' %>">
+                <div class="errorsBack">
+                    <% if (locals.errors && errors.password){ %>
+                        <small><%= errors.password.msg %></small>
+                    <% } %>
+                </div>
+                <div class="errorsFront">
+
+                </div>
                 <div class="rememberme">
                     <label for="rememberme">Recuérdame:
                         <input type="checkbox" id="rememberme" name="rememberme">
@@ -24,5 +42,6 @@
                 <small class="signup-message">¿No tenés una cuenta? <a href="/user/signUp">Crear una cuenta</a></small>
             </form>
         </main>
+        <script src="/js/userAccess.js"></script>
     </body>
 </html>

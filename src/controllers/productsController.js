@@ -1,6 +1,7 @@
 const path = require('path'); //Se importa Path para hacer uso de funciones que controlan rutas de archivos.
 const fs = require('fs'); //Se importa File System para lectura y escritura de archivos.
 const db = require('../database/models') //Se guardan todos los modelos existentes creados a través de Sequelize.
+const { validationResult } = require('express-validator') //Se importa la función para trabajar con las validaciones.
 
 //const productsFilePath = path.join(__dirname, '../data/products.json'); //La variable contiene la ruta en donde está el JSON de Productos.
 //const products = JSON.parse(fs.readFileSync(productsFilePath,'utf-8')); //La variable contiene el JSON de Productos convertido en un array de objetos.
@@ -54,11 +55,8 @@ const productsController = {
     store : function(req,res,next){
         let formData = req.body;
         let formFile = req.file;
-        if(!formFile){
-            const error = new Error('No se seleccionó una imagen')
-            error.httpStatusCode = 400
-            return next(error)
-        } else {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
             db.Product.create({
                 product_name: formData.nombre,
                 price: formData.precio,
@@ -69,20 +67,22 @@ const productsController = {
                 product_type: formData.tipo,
                 stock: formData.stock
             })
-            /*const productNew = {
-                id: products.length + 1,
-                name: formData.nombre,
-                price: formData.precio,
-                discount: formData.descuento,
-                description: formData.descripcion,
-                ingredients: formData.ingredientes,
-                image: formFile.filename,
-                type: formData.tipo,
-                stock: formData.stock
-            }
-            addProduct(productNew); USADO PARA JSON.*/
             res.redirect('/products/all')
+        } else {
+            res.render('product-create', {errors:errors.mapped(), oldData: formData})
         }
+        /*const productNew = {
+            id: products.length + 1,
+            name: formData.nombre,
+            price: formData.precio,
+            discount: formData.descuento,
+            description: formData.descripcion,
+            ingredients: formData.ingredientes,
+            image: formFile.filename,
+            type: formData.tipo,
+            stock: formData.stock
+        }
+        addProduct(productNew); USADO PARA JSON.*/
     },
     edit : function(req,res){
         let id = req.params.id;
@@ -99,23 +99,32 @@ const productsController = {
         let id = req.params.id;
         let formData = req.body;
         let formFile = req.file;
-        db.Product.update(
-            {
-                product_name: formData.nombre,
-                price: formData.precio,
-                discount: formData.descuento,
-                product_description: formData.descripcion,
-                ingredients: formData.ingredientes,
-                image: formFile.filename,
-                product_type: formData.tipo,
-                stock: formData.stock
-            },
-            {
-                where:{
-                    id: id
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            db.Product.update(
+                {
+                    product_name: formData.nombre,
+                    price: formData.precio,
+                    discount: formData.descuento,
+                    product_description: formData.descripcion,
+                    ingredients: formData.ingredientes,
+                    image: formFile.filename,
+                    product_type: formData.tipo,
+                    stock: formData.stock
+                },
+                {
+                    where:{
+                        id: id
+                    }
                 }
-            }
-        )
+            )
+            res.redirect('/products/all');
+        } else {
+            db.Product.findOne({where:{id:id}}).then(function(productFound){
+                res.render('product-edit', {errors:errors.mapped(), oldData: formData, product:productFound})
+            })
+            
+        }
         /*let productFound = products.find(function(product){
             return product.id == id;
         })
@@ -128,7 +137,6 @@ const productsController = {
         productFound.type = formData.tipo;
         productFound.stock = formData.stock;
         updateDB(); USADO PARA JSON.*/
-        res.redirect('/products/all');
     },
     delete : (req, res) => {
 		let id = req.params.id;

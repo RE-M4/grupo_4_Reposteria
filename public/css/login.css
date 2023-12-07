@@ -121,3 +121,15 @@ h1 {
 .signup-message a {
     text-decoration: none;
 }
+
+.errorsBack {
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+.errorsFront {
+    display: flex;
+    justify-content: center;
+    color: red;
+}
