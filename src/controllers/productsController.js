@@ -32,17 +32,19 @@ const { validationResult } = require('express-validator') //Se importa la funci√
 /** CONTROLADOR */
 const productsController = {
     all : function(req,res){
+        let user = req.session.user;
         db.Product.findAll().then(function(products){
-            res.render('products', {products: products})
+            res.render('products', {products: products, user:user})
         })
         //res.render('products', {products: products}) USADO PARA JSON.
     },
     details : function(req,res){
+        let user = req.session.user;
         let id = req.params.id;
         let productFound = db.Product.findOne({where:{id:id}})
         let allProducts = db.Product.findAll()
         Promise.all([productFound,allProducts]).then(function([productFound,allProducts]){
-            res.render('product-detail', {product: productFound, products: allProducts})
+            res.render('product-detail', {product: productFound, products: allProducts, user:user})
         })
         /*let productFound = products.find(function(product){
             return product.id == id;

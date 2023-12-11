@@ -3,16 +3,16 @@ const fs = require('fs'); //Se importa File System para lectura y escritura de a
 
 const usersFilePath = path.join(__dirname, '../data/users.json'); //La variable contiene la ruta en donde está el JSON de Usuarios.
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); //La variable contiene el JSON de Usuarios convertido en un array de objetos.
+let db = require('../database/models');
 
 //Middleware para trabajar con la cookie (si existe).
 function cookieAuthMiddleware (req, res, next) {
     if(req.cookies.userId != undefined && req.session.user == undefined){
-        let userFound = users.find(function(user){
-            return user.id == req.cookies.userId;
+        db.User.findOne({where:{id:req.cookies.userId}}).then(function(user){
+            if(user){
+                req.session.user = user;
+            }
         })
-        if(userFound){
-            req.session.user = userFound;
-        }
     }
     next();
 }

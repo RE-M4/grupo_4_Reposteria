@@ -19,7 +19,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: #DAFAFF;
-    border-top: 1px black solid;;
+    border-top: 1px black solid;
 }
 
 .contenedor-footer {
@@ -178,6 +178,10 @@ h2:hover{
     background-color:rgb(108, 151, 151);
     transition: transform 1s ease, background-color 1s ease;
     color: white;
+}
+
+main {
+    height: 75vh;
 }
 
 .main-informacion {

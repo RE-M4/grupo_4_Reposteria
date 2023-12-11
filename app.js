@@ -21,7 +21,7 @@ app.use(express.json()); //Se declara a Express que puede hacer uso de archivos 
 app.use(session({secret:'secret', resave: false, saveUninitialized: true})); //Configuración de Express Session.
 app.use(cookieParser()); //Se declara a express que use la funcionalidad de las cookies.
 
-app.set('views', [path.join(__dirname, './src/views'),path.join(__dirname, './src/views/products'),path.join(__dirname, './src/views/users')]); //Se declara a EJS dónde debe buscar los archivos de vista.
+app.set('views', [path.join(__dirname, './src/views'),path.join(__dirname, './src/views/products'),path.join(__dirname, './src/views/users'),path.join(__dirname, './src/views/admin')]); //Se declara a EJS dónde debe buscar los archivos de vista.
 app.set('view engine', 'ejs'); //Se declara a Express que use EJS como Template Engine.
 
 app.use(cookieAuthMiddleware);
@@ -30,6 +30,9 @@ app.use(cookieAuthMiddleware);
 app.use(indexRouter);
 app.use('/user',userRouter);
 app.use('/products',productsRouter);
+app.use((req, res, next) => {
+    res.status(404).render('error-404');
+})
 
 app.listen(3000, () => {
     console.log("Server Running");

@@ -30,6 +30,7 @@ const { validationResult } = require('express-validator') //Se importa la funci√
     fs.writeFileSync(usersFilePath, usersJSON);
 }*/
 
+let showMsg = false;
 /** CONTROLADOR */
 const userController = {
     signup : function(req,res){
@@ -49,7 +50,8 @@ const userController = {
                 category: "user",
                 image: formFile.filename
             })
-            res.redirect('/');
+            showMsg = true;
+            res.redirect('/user/login');
         } else {
             res.render('register', {errors: errors.mapped(), oldData: req.body})
         }
@@ -66,7 +68,8 @@ const userController = {
         addUser(newUser); USADO PARA JSON.*/
     },
     login : function(req,res){
-        res.render('login')
+        res.render('login', {showMsg: showMsg})
+        showMsg = false;
     },
     authenticate: function(req, res){
         let formData = req.body;
@@ -97,6 +100,11 @@ const userController = {
     },
     profile: function(req, res){
         res.render('profile', {user: req.session.user});
+    },
+    panel: function(req,res){
+        db.Product.findAll().then(function(products){
+            res.render('panel', {products: products})
+        })
     }
 };
 

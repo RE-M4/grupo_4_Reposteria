@@ -9,10 +9,14 @@
         <p><i class="fa-solid fa-shop"></i><a href="/products/all">Productos</a></p>
         <p><i class="fa-solid fa-phone"></i><a href="#">Contáctanos</a></p>
       </ul>
-      <ul class="nav-secundaria">
-        <a href="/user/signup"><button class="boton-secundaria" id="boton-secundaria"><i class="fa-solid fa-right-to-bracket"></i></button></a>
-        <a href="/user/login"><button class="boton-secundaria" id="boton-secundaria"><i class="fa-solid fa-user"></i></button></a>
-        <a href="#"><button class="boton-secundaria"><i class="fa-solid fa-cart-shopping"></i></button></a>
-      </ul>
+      <% if(user) { %>
+        <a href="/user/profile"><button class="boton-secundaria" id="boton-secundaria">Ir a mi perfil</button></a>
+      <% } else { %>
+        <ul class="nav-secundaria">
+          <a href="/user/signup"><button class="boton-secundaria" id="boton-secundaria"><i class="fa-solid fa-right-to-bracket"></i></button></a>
+          <a href="/user/login"><button class="boton-secundaria" id="boton-secundaria"><i class="fa-solid fa-user"></i></button></a>
+          <!--<a href="#"><button class="boton-secundaria"><i class="fa-solid fa-cart-shopping"></i></button></a>-->
+        </ul>
+      <% } %>
     </nav>
   </header>

@@ -19,7 +19,7 @@ const validations = [
         .isLength({min:20}).withMessage('Este campo debe tener al menos 20 caracteres'),
     body('imagen')
         .custom((value, { req }) => {
-            if(value === undefined){
+            if(req.file === undefined){
                 throw new Error('El formato de la imagen debe ser JPG, JPEG o PNG y es obligatorio')
             } else {
                 if(req.file.mimetype != 'image/jpg' && req.file.mimetype != 'image/jpeg' && req.file.mimetype != 'image/png'){

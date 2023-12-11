@@ -8,35 +8,34 @@
         <div class="detail-container">
             <div class="detail-info" id="detail-info-left">
                 <img class="product-image" src="/images/products/<%= product.image %>" alt="imagen">
-                <span>Precio: $<%= product.price %></span>
-                <span>Descuento: <%= product.discount %>%</span>
+                <h2>Precio: $<%= product.price - (product.price * (product.discount/100)) %></h2>
+                <h5><% if(product.discount != 0){ %>
+                    Este producto tiene un descuento del <%= product.discount %>%
+                <% } %></h5>
             </div>
             <div class="detail-info" id="detail-info-right">
                 <div class="detail-info-child">
-                    <span><%= product.product_name %></span>
-                    <span><%= product.product_description %></span>
+                    <h1><%= product.product_name %></h1>
+                    <p><%= product.product_description %></p>
                 </div>
                 <div class="options">
                     <span>Cantidad: <input type="number" value="1"></span>
                     <button>Agregar al carrito</button>
-                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-                        <button type="submit">BORRAR</button>
-                    </form>
-                    <a href="/products/edit/<%= product.id %>"><button>EDITAR</button></a>
                 </div>
             </div>
         </div>
         <div class="related-container">
             <h2 class="related-title">Productos Relacionados</h2>
             <div class="related-content">
-                <% results=0, i=0 %>
+                <% results=0, i=0%>
                 <% while(results<=2 && i<products.length) { %>
+                    <% //i=Math.round(Math.random() * (products.length - 0 + 1) + 0) %>
                     <% if((product.product_type == products[i].product_type) && (product.id != products[i].id)){ %>
                         <div class="related-product">
                             <img class="related-image" src="/images/products/<%= products[i].image %>" alt="imagen">
                             <a href="/products/details/<%= products[i].id %>">
                                 <p class="related-name"><%= products[i].product_name %></p>
-                                <p class="related-price">$<%= products[i].price %></p>
+                                <p class="related-price">$<%= products[i].price - (products[i].price * (products[i].discount/100)) %></p>
                             </a>
                         </div>
                         <% results++ %>

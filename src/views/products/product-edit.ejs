@@ -39,7 +39,7 @@
                 </div>
                 <div class="text-area">
                     <label for="descripcion"></label>
-                    <textarea name="descripcion" id="descripcion" cols="50" rows="5"  ><%= locals.oldData && oldData.descripcion ? oldData.descripcion : product.product_description %></textarea>
+                    <textarea name="descripcion" id="descripcion" cols="50" rows="5" maxlength="1000" ><%= locals.oldData && oldData.descripcion ? oldData.descripcion : product.product_description %></textarea>
                     <div class="errorsBack">
                         <% if (locals.errors && errors.descripcion){ %>
                             <small><%= errors.descripcion.msg %></small>
@@ -49,7 +49,7 @@
 
                     </div>
                     <label for="ingredientes"></label>
-                    <textarea name="ingredientes" id="ingredientes" cols="50" rows="5"  ><%= locals.oldData && oldData.ingredientes ? oldData.ingredientes : product.ingredients %></textarea>
+                    <textarea name="ingredientes" id="ingredientes" cols="50" rows="5" maxlength="1000" ><%= locals.oldData && oldData.ingredientes ? oldData.ingredientes : product.ingredients %></textarea>
                     <div class="errorsBack">
                         <% if (locals.errors && errors.ingredientes){ %>
                             <small><%= errors.ingredientes.msg %></small>
@@ -62,7 +62,7 @@
 
                 <div class="carga-imagen">
                     <label for="imagen"></label>
-                    <input type="file" id="imagen" name="imagen" >
+                    <input type="file" id="imagen" name="imagen" value="<%= locals.oldData && oldData.imagen ? oldData.imagen : product.image %>">
                 </div>
                 <div class="errorsBack">
                     <% if (locals.errors && errors.imagen){ %>
@@ -99,7 +99,7 @@
                 </div>
                 <div class="button-options">
                     <button type="submit" class="option">Guardar cambios</button>
-                    <a href="/" class="button">Volver</button></a>
+                    <a href="/user/panel" class="button">Volver</button></a>
                 </div>
             </form>
         </main>

@@ -9,9 +9,17 @@
                 <div>
                     <h1>Productos</h1>
                 </div>
+                <div class="filter">
+                    <label for="filter">Mostrar: </label>
+                    <select name="filter" id="filter">
+                        <option value="">Todos</option> 
+                        <option value="torta">Tortas</option>
+                        <option value="masa-dulce">Masas dulces</option>
+                    </select>
+                </div>
                 <div class="producto-container">
                     <% products.forEach(function(product){ %>
-                        <section class="producto">
+                        <section class="producto" id="<%= product.product_type %>">
                             <a href="/products/details/<%= product.id %>">
                                 <figure>
                                     <img class="producto-imagen" src="/images/products/<%= product.image %>" alt="imagen">
@@ -20,7 +28,12 @@
                                     <h2>
                                         <%= product.product_name %>
                                     </h2>
-                                    <span>$<%= product.price %></span>
+                                    <% if(product.discount == 0) { %>
+                                        <p id="price">$<%= product.price %></p>
+                                    <% } else { %>
+                                        <p id="price-old">$<%= product.price %></p>
+                                        <p id="price">$<%= product.price - (product.price * (product.discount/100)) %></p>
+                                    <% }%>
                                 </article>
                             </a>
                         </section>
@@ -28,5 +41,6 @@
                 </div>
             </main>
             <%- include('./partials/footer') %>
+            <script src="/js/productsAll.js"></script>
     </body>
 </html>

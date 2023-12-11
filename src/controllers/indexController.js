@@ -2,7 +2,8 @@ const path = require('path');
 
 const indexController = {
     index : function(req,res) {
-        res.render('index')
+        let user = req.session.user;
+        res.render('index', {user:user})
     }
 };
 

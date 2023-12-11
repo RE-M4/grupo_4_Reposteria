@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+    <title>Panel</title>
+    <link rel="stylesheet" href="/css/panel.css">
+    <body>
+        <h1>Panel de administración para Productos</h1>
+        <table>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Tipo</th>
+              <th>Stock</th>
+            </tr>
+            <% products.forEach(function(product){ %>
+                <tr>
+                    <td><%= product.id %></td>
+                    <td><%= product.product_name %></td>
+                    <td><%= product.price %></td>
+                    <td><%= product.product_type %></td>
+                    <td><%= product.stock %></td>
+                    <td><a href="/products/edit/<%= product.id %>"><button>EDITAR</button></a></td>
+                    <td><form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST"><button type="submit">BORRAR</button></form></td>
+                </tr>
+              <% }) %>
+          </table>
+          <div class="panel-options">
+            <a href="/products/create" class="button" id="back">Agregar un nuevo producto</a>
+            <a href="/user/profile" class="button" id="back">Volver</button></a>
+          </div>
+    </body>
+</html>

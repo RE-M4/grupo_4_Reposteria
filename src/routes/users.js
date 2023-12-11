@@ -27,12 +27,21 @@ function guestMiddleware(req, res, next) {
     }
 }
 
+//Middleware para verificar que el usuario es un administrador (tipo "admin").
+function adminMiddleware(req,res,next) {
+    if(req.session.user.category == 'admin'){
+        next();
+    } else {
+        res.status(404).render('error-404')
+    }
+}
+
 router.get('/signup', guestMiddleware, userController.signup); //Formulario de registro (solo accesible si no estás logueado).
 router.post('/register', upload.single('imagen'), registerValidations, userController.create); //Crear un nuevo usuario.
 router.get('/login', guestMiddleware, userController.login); //Formulario de ingreso (solo accesible si no estás logueado).
 router.post('/login', accessValidations, userController.authenticate); //Inicio de sesión de un usuario (guardado en una session de forma obligatoria y en una cookie de forma opcional).
 router.post('/logout', authMiddleware, userController.logout); //Función para cerrar sesión (destruye la session y limpia la cookie).
 router.get('/profile', authMiddleware, userController.profile); //Perfil de usuario (solo accesible si estás logueado).
-
+router.get('/panel', [authMiddleware, adminMiddleware], userController.panel); //Panel de control para administadores.
 
 module.exports = router;

@@ -6,11 +6,18 @@
     <body>
         <%- include('./partials/header') %>
         <main>
-            <figure><img src="/images/users/<%= user.image %>" alt="profile-picture"></figure>
-            <span><%= user.email %></span>
-            <form action="/user/logout" method="POST">
-                <button type="submit">Cerrar sesión</button>
-            </form>
+            <div class="user-info">
+                <h1>Bienvenido otra vez, <%= user.first_name %></h1>
+                <figure><img src="/images/users/<%= user.image %>" alt="profile-picture"></figure>
+            </div>
+            <div class="user-options">
+                <form action="/user/logout" method="POST">
+                    <button type="submit">Cerrar sesión</button>
+                </form>
+                <% if(user.category == 'admin'){ %>
+                    <a href="/user/panel">Administrar</a>
+                <% } %>
+            </div>
         </main>
         <%- include('./partials/footer') %>
     </body>

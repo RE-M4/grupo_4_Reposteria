@@ -93,10 +93,9 @@ header {
 /** FOOTER */
 footer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     background-color: #DAFAFF;
-    border-top: 1px black solid;;
+    border-top: 1px black solid;
 }
 
 .contenedor-footer {
@@ -137,5 +136,67 @@ footer {
 
 #instagram {
     margin-left: 5px;
+}
+
+/** MAIN */
+main {
+    width: 100%;
+    height: 75vh;
+    margin-top: 2%;
+}
+
+figure {
+    width: fit-content;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4%;
+}
+  
+.user-options button{
+    color: rgba(255, 255, 255, 0.884); 
+    padding: 5px;
+    background-color:rgb(82, 148, 148);
+    border: 1px ;
+    border-radius: 10px;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+}
+
+.user-options a {
+    color: rgba(255, 255, 255, 0.884); 
+    padding: 5px;
+    background-color:rgb(82, 148, 148);
+    border: 1px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    align-items: center;
+}
+
+.user-options button:hover{
+    transform: scale(1.1); 
+    background-color:rgb(44, 97, 97); 
+    transition: transform 1s ease, background-color 0.5s ease;
+    color: white;
+}
+
+.user-options a:hover {
+    transform: scale(1.1); 
+    background-color:rgb(44, 97, 97); 
+    transition: transform 1s ease, background-color 0.5s ease;
+    color: white;
 }
 
